@@ -1,11 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Definition from './components/Definition'
+
 
 function App() {
   return (
     
     <div className="App">
-     <h1>Let's Try using hooks</h1>
+    
+          <span path="/definition" element= {<Definition/>}/>
+    
     </div>
   );
 }
