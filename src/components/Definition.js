@@ -1,5 +1,5 @@
 
-import {useState,useEffect} from 'react';
+/*import {useState,useEffect} from 'react';
 
 
 export default function Definition() {
@@ -14,4 +14,4 @@ useEffect(() => {
 
 return <p>Here is a defenition</p>;
 }
-
+*/
