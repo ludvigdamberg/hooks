@@ -1,6 +1,7 @@
 import './App.css';
+import Header from './components/Header';
 import {useState, useEffect} from 'react';
-
+import Definition from './components/Definition';
 
 function App() {
 
@@ -23,13 +24,8 @@ function App() {
   return (
     
     <div className="App">
-    {posts.map(post => 
-      (<div key={post.id}>
-        <h5>{post.title}</h5>
-        <p>{post.body}</p>
-      </div>
-      ))}
-    
+      <Header/>
+    <Definition/>
     </div>
   );
 }

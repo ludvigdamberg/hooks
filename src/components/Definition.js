@@ -1,17 +1,34 @@
+import React from 'react'
+import {useState, useEffect} from 'react'
 
-/*import {useState,useEffect} from 'react';
 
+const Definition = () => {
 
-export default function Definition() {
+   const [posts, setPosts] = useState([])
 
-const [word, setWord] = useState();
-
-useEffect(() => {
-   fetch("https://api.dictionaryapi.dev/api/v2/entries/en/hello")
-.then((response) => response.json())
-.then((data) => console.log(data)); 
-}, []);
-
-return <p>Here is a defenition</p>;
+   useEffect(() => {
+     getData();
+   }, []);
+ 
+   const getData = async () => {
+     const response = await fetch(
+       `https://jsonplaceholder.typicode.com/posts`
+     );
+     const data = await response.json();
+ 
+     setPosts(data);
+ 
+   }
+  return (
+    <div>
+       {posts.map(post => 
+      (<div key={post.id}>
+        <h5>{post.title}</h5>
+        <p>{post.body}</p>
+      </div>
+      ))}
+    </div>
+  )
 }
-*/
+
+export default Definition
